@@ -4,15 +4,11 @@ import Layout from './Layout/Layout'
 
 import Dashboard from './page/Dashboard'
 import Form from './page/Form'
+import RouterIndex from './RouterIndex'
 
 function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Dashboard />}/>
-        <Route path="/form" element={<Form />}/>
-      </Routes>
-    </Layout>
+    <RouterIndex />
   )
 }
 
