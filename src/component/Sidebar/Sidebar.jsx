@@ -8,8 +8,8 @@ import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 import StorageOutlinedIcon from '@mui/icons-material/StorageOutlined';
-
-
+import SettingsIcon from '@mui/icons-material/Settings';
+import LogoutIcon from '@mui/icons-material/Logout';
 import { Link } from "react-router-dom";
 import { Sidebar,SubMenu, Menu, MenuItem   } from "react-pro-sidebar";
 import logo from '../../assets/logo.png'
@@ -108,12 +108,19 @@ export default function Sidebarnew({children}){
                             <MenuItem>Plant out</MenuItem>
                             <MenuItem>Plant Location Supplier</MenuItem>
                             <MenuItem>Doctype</MenuItem>
-                            <MenuItem>Mapping sales group&Industry name</MenuItem>
                             <MenuItem>Classmark</MenuItem>
                             <MenuItem>Material</MenuItem>
                         </SubMenu>
                     </Menu>
                     <Menu>
+                        <div className='mb-10'>
+                            <MenuItem icon={<SettingsIcon/>} component={<Link to="/"/>}>
+                                Settings
+                            </MenuItem>
+                            <MenuItem icon={<LogoutIcon/>}>
+                                Logout
+                            </MenuItem>
+                        </div>
                         {collapsed? 
                                 <div className="flex justify-center items-center mb-10">
                                     <img src={imgAcc}/>
